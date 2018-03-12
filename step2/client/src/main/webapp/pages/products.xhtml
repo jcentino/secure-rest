@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Secure REST (step 2)</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        Welcome #{userBean.applicationUserToken.name}  <br/><br/>
+        Selected products : <br/>
+        <ui:repeat value="#{orderBean.products}" var="_product">
+            Product #{_product} <br/>
+        </ui:repeat>
+        <p:commandButton value="Select Product" actionListener="#{orderBean.selectProduct}"
+                         update="@form"/>
+        <p:commandButton value="Checkout" actionListener="#{loggingBean.clearLogging}"
+                         action="checkout.xhtml" ajax="false"/>
+        <hr/>
+        Call server #{loggingBean.path} with #{loggingBean.request} <br/>
+        Headers <br/>
+        <ui:repeat value="#{loggingBean.headerKeys}" var="_header">
+            <h:outputText value="#{_header} : #{loggingBean.getHeaderValue(_header)}" /><br/>
+        </ui:repeat>
+        Response from server #{loggingBean.response}
+    </h:form>
+</h:body>
+
+</html>
