@@ -34,6 +34,8 @@
 
     <properties>
         <atbash.config.version>0.9.1</atbash.config.version>
+
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
     <packaging>war</packaging>
