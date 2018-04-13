@@ -1,6 +1,6 @@
-package be.atbash.ee.security.rest.step2.view;
+package be.atbash.ee.security.rest.step3.view;
 
-import be.atbash.ee.security.rest.step2.user.ApplicationUserToken;
+import be.atbash.ee.security.rest.step3.user.ApplicationUserToken;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;

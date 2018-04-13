@@ -1,20 +1,13 @@
-package be.atbash.ee.security.rest.step2.view;
+package be.atbash.ee.security.rest.step3.view;
 
 import be.atbash.ee.security.octopus.jwt.decoder.JWTData;
 import be.atbash.ee.security.octopus.jwt.decoder.JWTDecoder;
-import be.atbash.ee.security.octopus.jwt.keys.KeySelector;
-import be.atbash.ee.security.rest.step2.RemoteKeySelector;
-import be.atbash.ee.security.rest.step2.logging.ClientLoggingFilter;
-import be.atbash.ee.security.rest.step2.user.ApplicationUserToken;
-import be.atbash.ee.security.rest.step2.user.UserNamePassword;
+import be.atbash.ee.security.rest.step3.RemoteKeySelector;
+import be.atbash.ee.security.rest.step3.logging.ClientLoggingFilter;
+import be.atbash.ee.security.rest.step3.user.ApplicationUserToken;
+import be.atbash.ee.security.rest.step3.user.UserNamePassword;
 
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.inject.Instance;
 import javax.enterprise.inject.Model;
-import javax.enterprise.inject.UnsatisfiedResolutionException;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.enterprise.inject.spi.CDI;
 import javax.inject.Inject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -23,10 +16,6 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
 
 /**
  *

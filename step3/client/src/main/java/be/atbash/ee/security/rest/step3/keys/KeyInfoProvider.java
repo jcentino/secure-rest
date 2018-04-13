@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package be.atbash.ee.security.rest.step2.keys;
+package be.atbash.ee.security.rest.step3.keys;
 
 import be.atbash.ee.security.octopus.jwk.JWKManager;
 import be.atbash.ee.security.signature.api.SignatureKeyInfo;

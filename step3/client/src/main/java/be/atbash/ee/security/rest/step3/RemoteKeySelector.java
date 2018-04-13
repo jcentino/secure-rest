@@ -1,4 +1,4 @@
-package be.atbash.ee.security.rest.step2;
+package be.atbash.ee.security.rest.step3;
 
 import be.atbash.ee.security.octopus.jwt.keys.KeySelector;
 import com.nimbusds.jose.JOSEException;

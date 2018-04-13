@@ -1,11 +1,9 @@
-package be.atbash.ee.security.rest.step2.view;
+package be.atbash.ee.security.rest.step3.view;
 
-import be.atbash.ee.security.octopus.jwt.encoder.JWTEncoder;
-import be.atbash.ee.security.octopus.jwt.parameter.JWTParametersNone;
-import be.atbash.ee.security.rest.step2.logging.ClientLoggingFilter;
-import be.atbash.ee.security.rest.step2.logging.LoggingWriterInterceptor;
-import be.atbash.ee.security.rest.step2.order.DeliveryAddress;
-import be.atbash.ee.security.rest.step2.order.Order;
+import be.atbash.ee.security.rest.step3.logging.ClientLoggingFilter;
+import be.atbash.ee.security.rest.step3.logging.LoggingWriterInterceptor;
+import be.atbash.ee.security.rest.step3.order.DeliveryAddress;
+import be.atbash.ee.security.rest.step3.order.Order;
 import be.atbash.ee.security.signature.jaxrs.SignatureClientRequestFilter;
 import be.atbash.ee.security.signature.jaxrs.SignatureWriterInterceptor;
 
@@ -65,6 +63,7 @@ public class OrderBean implements Serializable {
         Client client = ClientBuilder.newClient();
         client.register(SignatureClientRequestFilter.class);
         client.register(SignatureWriterInterceptor.class, 200);
+
         client.register(LoggingWriterInterceptor.class, 100);
         client.register(ClientLoggingFilter.class, 50);
 

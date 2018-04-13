@@ -1,4 +1,4 @@
-package be.atbash.ee.security.rest.step2.logging;
+package be.atbash.ee.security.rest.step3.logging;
 
 import javax.enterprise.inject.spi.CDI;
 import javax.ws.rs.WebApplicationException;

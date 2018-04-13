@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package be.atbash.ee.security.rest.step2.config;
+package be.atbash.ee.security.rest.step3.config;
 
 import be.atbash.config.spi.BaseConfigurationName;
 

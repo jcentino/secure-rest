@@ -1,4 +1,4 @@
-package be.atbash.ee.security.rest.step2.user;
+package be.atbash.ee.security.rest.step3.user;
 
 /**
  *
