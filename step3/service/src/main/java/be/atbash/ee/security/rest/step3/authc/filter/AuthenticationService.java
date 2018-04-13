@@ -34,6 +34,10 @@ public class AuthenticationService {
     public ApplicationUserToken authenticate(ContainerRequestContext containerRequest) {
         String header = containerRequest.getHeaderString(AUTHENTICATION_HEADER);
 
+        if (header == null) {
+            throw new WebApplicationException(Response.Status.UNAUTHORIZED);
+        }
+
         String[] parts = header.split(" ");
         if (parts.length != 2) {
             throw new WebApplicationException(Response.Status.UNAUTHORIZED);
